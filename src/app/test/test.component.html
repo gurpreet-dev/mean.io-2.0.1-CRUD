@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<form #testdata = "ngForm" (ngSubmit) = "onclickSubmit(testdata.value)">
+    <input name="text" name="name" placeholder="Enter name" ngModel><br>
+    <input name="text" name="email" placeholder="Enter email" ngModel><br>
+    <input type="submit" value="Submit">
+</form>

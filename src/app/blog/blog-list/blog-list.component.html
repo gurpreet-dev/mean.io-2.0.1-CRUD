@@ -1,0 +1,20 @@
+<div class="posts">
+    <div aria-flowto="<left></left>">
+      <h2>{{ title }}</h2>
+      <button class="addBtn" mat-fab [routerLink]="['/blog/new']"> <mat-icon>add</mat-icon></button>
+      <br>
+    </div>
+    <mat-card *ngFor="let blog of blogs">
+        <mat-list>
+            <mat-list-item>
+            <a mat-line [routerLink]="['/blog/blog-detail', blog._id]"> {{blog.title}} </a>
+            <p mat-line>
+                <span>{{blog.content}}</span>
+            </p>
+            <span><button mat-button (click)='deleteBlog(blog._id)'><mat-icon>delete</mat-icon></button></span>
+            <span><button mat-button [routerLink]="['/blog/edit', blog._id]"><mat-icon>edit</mat-icon></button></span>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>
+  

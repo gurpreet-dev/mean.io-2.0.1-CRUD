@@ -1,0 +1,10 @@
+{{ title }}
+
+<div class="alert alert-success" *ngIf="successalert">{{ successalert }}</div>
+<div class="alert alert-error" *ngIf="erroralert">{{ erroralert }}</div>
+
+<form [formGroup]="form" (ngSubmit) = "update()">
+    <input type="text" name="title" placeholder="Enter title" formControlName="title"><br>
+    <textarea name="content" placeholder="Enter content" formControlName="content"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
